@@ -1,0 +1,10 @@
+stages:
+  - test
+
+test:
+  script:
+    - npm install
+    - npx wdio run wdio.conf.js
+  only:
+    - master
+    - merge_requests
